@@ -2,28 +2,28 @@ jQuery.namespace('Canvas');
 
 (function($, Canvas){
 	var 
-	//ÏàÆ¬ÁĞ±í£¬Êı×é
+	//ç›¸ç‰‡åˆ—è¡¨ï¼Œæ•°ç»„
 	list,
-	//È«²¿ÏàÆ¬ÁĞ±í£¬Êı×é
+	//å…¨éƒ¨ç›¸ç‰‡åˆ—è¡¨ï¼Œæ•°ç»„
 	all,
-	//Ñ©»¨£¬snow.js¶¨Òå¶ÔÏó
+	//é›ªèŠ±ï¼Œsnow.jså®šä¹‰å¯¹è±¡
 	snow,
-	//·½µÊLogo,Image¶ÔÏó
+	//æ–¹å‡³Logo,Imageå¯¹è±¡
 	logo,
-	//Ê±¼äÖá¿ªÊ¼Ê±¼ä
+	//æ—¶é—´è½´å¼€å§‹æ—¶é—´
 	startTime,	
-	//µ±Ç°Ê±¼äÖá²¥·Å¶ÔÏó,photo.js¶¨Òå
+	//å½“å‰æ—¶é—´è½´æ’­æ”¾å¯¹è±¡,photo.jså®šä¹‰
 	photoObj,
 	nextObj;
-	//Ğ´ÎÄ×Ö
+	//å†™æ–‡å­—
 	function drawText(text,left,top){
 		Canvas.context.save();
-		Canvas.context.font = '20px Î¢ÈíÑÅºÚ'
+		Canvas.context.font = '20px å¾®è½¯é›…é»‘'
 		Canvas.context.fillStyle = 'white';
 		Canvas.context.fillText (text,left,top);
 		Canvas.context.restore();
 	}
-	//»­Í¼Æ¬
+	//ç”»å›¾ç‰‡
 	function drawPic(img,text,left,top,width,height,deg){
 		deg=deg||0;
 		var ox = left+(width/2),oy = top+(height/2);
@@ -44,7 +44,7 @@ jQuery.namespace('Canvas');
 		}
 		Canvas.context.restore();
 	}
-	//¸ù¾İÆğÊ¼Î»ÖÃºÍ½áÊøÎ»ÖÃ£¬ÒÔ¼°diff£¬¼ÆËãµ±Ç°Î»ÖÃ
+	//æ ¹æ®èµ·å§‹ä½ç½®å’Œç»“æŸä½ç½®ï¼Œä»¥åŠdiffï¼Œè®¡ç®—å½“å‰ä½ç½®
 	function movePic(img,text,sPosition,dPosition,diff,duration){
 		var 
 		dl = dPosition.left-sPosition.left,
@@ -68,7 +68,7 @@ jQuery.namespace('Canvas');
 		}
 
 	}
-	//Ê±¼äÖá´¦Àí
+	//æ—¶é—´è½´å¤„ç†
 	function timeline(timeStamp){
 		var
 		diff = timeStamp - startTime,action;
@@ -133,7 +133,7 @@ jQuery.namespace('Canvas');
 		webkitRequestAnimationFrame(timeline);
 	}
 	
-	//³õÊ¼»¯
+	//åˆå§‹åŒ–
 	function init(){
 		Canvas.init($('#canvas')[0],1024,768);
 		var gradient= Canvas.context.createRadialGradient(512,384,20, 512,384,900);
@@ -144,7 +144,7 @@ jQuery.namespace('Canvas');
 		Canvas.saveCanvas();	
 	}
 	
-	//Ô¤¼ÓÔØÏÂÒ»¸ö¶ÔÏó
+	//é¢„åŠ è½½ä¸‹ä¸€ä¸ªå¯¹è±¡
 	function loadNext(){
 		nextObj = {ready:false};
 		console.log(list.length)
@@ -160,7 +160,7 @@ jQuery.namespace('Canvas');
 			nextObj = obj;
 		});
 	}
-	//¶¯»­³õÊ¼»¯
+	//åŠ¨ç”»åˆå§‹åŒ–
 	function initAnimation(){
 		nextObj = undefined;
 		list = all.slice(0); 

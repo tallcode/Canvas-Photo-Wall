@@ -2,15 +2,15 @@ jQuery.namespace('Canvas');
 
 (function($, Canvas){
 	$.extend(Canvas,{
-		//È«¾Ö»æÍ¼¶ÔÏó
+		//å…¨å±€ç»˜å›¾å¯¹è±¡
 		context:undefined,
 		temp:undefined,
-		//»º³åÇø
+		//ç¼“å†²åŒº
 		_buff:undefined,
-		//´óĞ¡
+		//å¤§å°
 		canvasWidth:0,
 		canvasHeight:0,
-		//2DcanvasÖ§³Ö
+		//2Dcanvasæ”¯æŒ
 		isSupport:function(){
 			var _temp = document.createElement('canvas');
 			if (!_temp || !_temp.getContext) {
@@ -22,7 +22,7 @@ jQuery.namespace('Canvas');
 			}	
 			return true;
 		},
-		//»æÍ¼³õÊ¼»¯
+		//ç»˜å›¾åˆå§‹åŒ–
 		init:function(el,width,height){
 			if(!this.isSupport()){
 				return false;
@@ -38,7 +38,7 @@ jQuery.namespace('Canvas');
 			this.canvasWidth = width;
 			return true;	
 		},
-		//ÔØÈëÍ¼Æ¬
+		//è½½å…¥å›¾ç‰‡
 		loadImg:function(url,obj){
 			var img = new Image();
 			img.onload = function(){obj = img;}

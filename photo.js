@@ -29,11 +29,11 @@ jQuery.namespace('Canvas');
 			ready:false;
 			self.title = text;
 			self.img = new Image();
-			//Keep�׶ε�λ��
+			//Keep阶段的位置
 			self.keep = new Canvas.position();
-			//start�׶ε�λ��
+			//start阶段的位置
 			self.start = new Canvas.position();
-			//end�׶ε�λ�úͽǶ�
+			//end阶段的位置和角度
 			self.end = new Canvas.position();
 			self.img.onload = function(){
 				self.width = this.width;
