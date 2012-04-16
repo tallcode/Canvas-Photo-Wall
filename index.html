@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Photo Wall</title>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#doc{
+		width:1024px;
+		height:768px;
+		position:relative;
+		overflow:hidden;
+	}
+	#doc .audio{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	
+	#doc .audio audio{
+		visibility:hidden;
+	}
+	
+	#doc .audio:hover audio{
+		visibility:visible;
+	}
+</style>
+</head>
+<body>
+<div id="doc">
+	<div class="canvas">
+		<canvas id="canvas" width="1024" height="768">
+		您所使用的浏览器不支持Canvas.
+		</canvas>
+	</div>
+	<div class="audio">
+		<audio id="audio" src="bgmusic.mp3" loop preload controls>
+		您所使用的浏览器不支持Audio.
+		</audio>
+	</div>
+</div>
+<script type="text/javascript" src="http://style.china.alibaba.com/js/lib/fdev-v4/core/fdev-min.js"></script>
+<script type="text/javascript" src="base.js"></script>
+<script type="text/javascript" src="photo.js"></script>
+<script type="text/javascript" src="snow.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
